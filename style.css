@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&family=Roboto+Mono:wght@100&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+    background-image: url(./background.jpg);
+    background-position: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size:1.2rem;
+    min-height: 100%;
+}
+
+h2{
+    font-family: 'Roboto Mono', monospace;
+}
+
+.contenedor > *{
+    box-shadow: -1px 1px 7px 0px black;
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+}
+
+.contenedor{
+    background-color: rgb(0, 0, 0);
+    display: grid;
+    gap:5px;
+    grid-template-areas:
+    "header"
+    "main"
+    "footer" ;
+}
+
+.encabezado{
+    text-align: center;
+    color:white;
+    width: 100%;
+    padding: 5px;
+    grid-area: header;
+    background-color: rgba(31, 204, 8, 0.363);
+}
+
+.encabezado p{
+    text-align: justify;
+}
+
+.principal{
+    background-color:rgba(0, 255, 64, 0.685);
+    margin:20px;
+    grid-area: main;
+    color: white;
+}
+
+.palabra{
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid rgb(255, 255, 255);
+}
+
+.btnEnviar{
+    text-align: center;
+    margin-top: 5px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.btnEnviar:hover{
+    transform: scale(1.2);
+}
+
+.piePag{
+    grid-area: footer;
+    background-color:rgba(31, 204, 8, 0.363);
+    color: white;
+    text-align: right;
+}
+
+@media(min-width: 600px){
+
+    .contenedor{
+        display: grid;
+        gap: 20px;
+        grid-template-areas:
+        "header main"
+        "header main"
+        "header main"
+        "header main"
+        "footer footer" ;
+    }
+
+    .encabezado{
+        background-color:rgba(31, 204, 8, 0.363);
+        padding: 100px;
+        margin: 0;
+    }
+
+    .principal{
+        background-color:rgba(31, 204, 8, 0.363);
+        padding:100px;
+        margin: 0;
+    }
+
+    .piePag{
+        background-color:rgba(0, 255, 64, 0.685);
+        text-align: center;
+        margin: 0;
+    }
+
+}
